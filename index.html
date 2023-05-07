@@ -4,11 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Read BSC Smart Contract</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.2/web3.min.js"></script>
+	<script src="app.js" defer></script>
 </head>
 <body>
     <h1>Read BSC Smart Contract Data</h1>
     <textarea id="inputStrings" rows="5" cols="50" placeholder="Enter strings separated by new lines"></textarea>
-    <button id="readDataWithStrings">Read Data with Strings</button>
+    <button id="readDataWithStrings" onclick="readContractData()">Read Data with Strings</button>
     <h2>Result:</h2>
     <p id="result"></p>
 
