@@ -1,4 +1,4 @@
-function readContractData() {
+function readContractData(strings) {
     console.log('Read Data button clicked'); // Debugging message
 
     if (typeof Web3 === 'undefined') {
@@ -12,7 +12,7 @@ function readContractData() {
     const contract = new web3.eth.Contract(contractABI, contractAddress);
 
     const functionName = 'paidUntil'; // Replace with the function name from the contract ABI
-    const arguments = ['0x5388aa7a1f98A4446543E57BCDAe50408638fd67']; // Replace with the function's arguments, if any
+    const arguments = [strings]; // Replace with the function's arguments, if any
 
     try {
         console.log('Trying to call function:', functionName); // Debugging message
