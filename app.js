@@ -13,7 +13,7 @@ function readContractData() {
 
     const functionName = 'paidUntil'; // Replace with the function name from the contract ABI
     
-	var address = document.getElementById('inputStrings').value;
+	var address = document.getElementById('inputStrings').value.trim();
 	const arguments = [address]; // Replace with the function's arguments, if any
 
     try {
