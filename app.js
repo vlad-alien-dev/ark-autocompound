@@ -22,7 +22,8 @@ function readContractData() {
         contract.methods[functionName](...arguments).call()
             .then(result => {
                 console.log('Function call result:', result); // Debugging message
-                document.getElementById('result').innerText = result;
+				var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
+				document.getElementById('result').innerText = d.setUTCSeconds('result');
             })
             .catch(error => {
                 console.error('Error calling function:', error); // Debugging message
