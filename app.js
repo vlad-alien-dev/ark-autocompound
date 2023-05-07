@@ -14,13 +14,13 @@ function readContractData() {
 	var addresses = document.getElementById('inputStrings').value.split('\n\n');
 	
 	for(var i =0; i< addresses.length;i++){
-			GetPaidDaysFromTheContract(addresses[i],i,contract)
+			GetPaidDaysFromTheContract(addresses[i],i+1,contract)
 	}
 	
 
 }
 
-function GetPaidDaysFromTheContract(address,resultCount, contract){
+function GetPaidDaysFromTheContract(address, resultCount, contract){
 		const arguments = [address]; // Replace with the function's arguments, if any
 		const functionName = 'paidUntil'; // Replace with the function name from the contract ABI
     try {
